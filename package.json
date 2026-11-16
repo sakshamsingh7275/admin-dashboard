@@ -1,0 +1,9 @@
+{
+  "name": "admin-dashboard",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c blue,cyan \"npm --prefix server start\" \"npm --prefix client run dev\""
+  },
+  "devDependencies": { "concurrently": "^8.2.2" }
+}
